@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patrician Hall Booking System</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome to Patrician Hall Booking System</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="register.html">Register</a></li>
+                <li><a href="admin.html">Admin</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>About Us</h2>
+            <p>Welcome to the Patrician Hall Booking System, where you can easily book halls for your events and activities. Our facilities are available for various occasions, from conferences to seminars and gatherings. We strive to provide a seamless booking experience to help you plan your events effectively.</p>
+        </section>
+
+        <section>
+            <h2>Available Halls for Booking</h2>
+            <p>We offer a variety of halls to cater to your needs:</p>
+            <ul>
+                <li><strong>A-Block Conference Hall (1st Floor)</strong> - Perfect for corporate meetings and conferences.</li>
+                <li><strong>B-Block OAT (G Floor)</strong> - Ideal for outdoor activities and events.</li>
+                <li><strong>B-Block Auditorium (G Floor)</strong> - Suitable for large gatherings, performances, and presentations.</li>
+                <li><strong>C Block Fintan Hall (G Floor)</strong> - Great for seminars and workshops.</li>
+                <li><strong>C Block Conference Hall</strong> - Designed for discussions and meetings.</li>
+                <li><strong>Delany Hall</strong> - A versatile space for various types of events.</li>
+                <li><strong>BMS Hall</strong> - Equipped for training sessions and lectures.</li>
+                <li><strong>Student Cafeteria</strong> - Perfect for informal gatherings and small events.</li>
+                <li><strong>Library Reference Hall</strong> - An ideal setting for study groups and small meetings.</li>
+                <li><strong>Board Room</strong> - Suitable for executive meetings and confidential discussions.</li>
+                <li><strong>Computer Lab</strong> - Equipped for technical workshops and training sessions.</li>
+            </ul>
+        </section>
+
+        <section id="services">
+            <h2>Our Services</h2>
+            <p>We offer a range of services to ensure your event runs smoothly:</p>
+            <ul>
+                <li><strong>Event Planning Assistance:</strong> Our team can help you plan every detail of your event.</li>
+                <li><strong>Audio-Visual Equipment:</strong> We provide high-quality AV equipment for presentations and performances.</li>
+                <li><strong>Catering Services:</strong> Enjoy a selection of catering options to suit your event.</li>
+                <li><strong>Parking Facilities:</strong> Ample parking space for your guests.</li>
+                <li><strong>Wi-Fi Access:</strong> Free Wi-Fi available throughout the venue.</li>
+            </ul>
+        </section>
+
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <p>If you have any questions or would like to book a hall, feel free to reach out to us:</p>
+            <p>Email: <a href="mailto:info@patriciancollege.edu">info@patriciancollege.edu</a></p>
+            <p>Phone: <a href="tel:+1234567890">+123 456 7890</a></p>
+            <p>Visit us at:</p>
+            <address>
+                Patrician College of Arts & Science,<br>
+                Chennai, Tamil Nadu, India.
+            </address>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Patrician College of Arts & Science. All rights reserved.</p>
+    </footer>
+</body>
+<script>
+    // Check if user is logged in
+    const token = localStorage.getItem('token');
+    if (!token) {
+        // Redirect to login if not logged in
+        window.location.href = 'login.html';
+    }
+
+    // Optionally decode the token to check user role
+    const payload = JSON.parse(atob(token.split('.')[1]));
+    console.log('User Role:', payload.role); // Use this to manage access based on role
+</script>
+
+</html>

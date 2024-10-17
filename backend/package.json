@@ -1,0 +1,16 @@
+{
+    "name": "patrician-hall-booking-system",
+    "version": "1.0.0",
+    "description": "A web application for booking college halls",
+    "main": "server.js",
+    "scripts": {
+        "start": "node server.js"
+    },
+    "dependencies": {
+        "express": "^4.17.1",
+        "mongoose": "^5.10.9",
+        "bcrypt": "^5.0.1"
+    },
+    "author": "Your Name",
+    "license": "ISC"
+}
